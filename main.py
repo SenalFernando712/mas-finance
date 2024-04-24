@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import requests
+from reportlab.platypus import SimpleDocTemplate, Table
 
 # Function to read CSV file from GitHub repository
 def read_csv_data(url):
