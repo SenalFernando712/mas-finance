@@ -18,8 +18,12 @@ def main():
     try:
         df = read_csv_data(raw_github_csv_link_gl)
         gl_codes = df['SAP B1 - A/C Name'].astype(str) + ' : ' + df['G/L Acct Long Text'].astype(str)
-        gl_no = st.selectbox('GL No', gl_codes)
-        st.write('Selected GL No:', gl_no)
+        selected_gl_index = st.selectbox('GL No', range(len(gl_codes)))
+        selected_gl_no = gl_codes[selected_gl_index]
+        # Display the selected GL No
+        st.write('Selected GL No:', selected_gl_no)
+        # Display the data from the third column of the selected row
+        st.write('Data from third column:', df.iloc[selected_gl_index, 2])
     except Exception as e:
         st.error(f'Error reading CSV file: {e}')
 
