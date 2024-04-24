@@ -101,7 +101,7 @@ def main():
     # Button to generate PDF
     if st.button("Generate PDF"):
         # Create PDF
-        pdf_generator = PDFGenerator(gl_pdf, cost_pdf, internal_pdf)
+        pdf_generator = PDFGenerator(vendor, gl_pdf, cost_pdf, internal_pdf, assignment, text, amount)
         pdf_generator.generate_pdf()
         
         
