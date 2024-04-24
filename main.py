@@ -31,7 +31,7 @@ def main():
         # Display the data from the third column (G/L Account) of the selected row
         if not row.empty:
             gl_pdf = row.iloc[0]['G/L Account']
-            #st.write('G/L Account:', gl_pdf)
+            st.write('G/L Account:', gl_pdf)
         else:
             st.write('No data found for the selected GL Account.')
             
@@ -56,17 +56,23 @@ def main():
         if not row_cost.empty:
             cost_pdf = row_cost.iloc[0]['Cost Center']
             internal_pdf = row_cost.iloc[0]['Internal Order']
-            #st.write('Cost Center Code:', cost_pdf)
-            #st.write('Internal Order Code:', internal_pdf)
+            st.write('Cost Center Code:', cost_pdf)
+            st.write('Internal Order Code:', internal_pdf)
         else:
             st.write('No data found for the selected Cost Center.')
             
     except Exception as f:
         st.error(f'Error reading Cost Center CSV file: {f}')
 
+    st.text_input('Assignment:')
+    st.text_input('Text:')
+    st.text_input('Amount:')
+    
+    '''
     st.write('G/L Account:', gl_pdf)
     st.write('Cost Center Code:', cost_pdf)
     st.write('Internal Order Code:', internal_pdf)
+    '''
 
 if __name__ == '__main__':
     main()
