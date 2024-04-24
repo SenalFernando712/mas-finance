@@ -13,6 +13,8 @@ def main():
 
     # Replace 'raw_github_csv_link' with the raw GitHub link to your CSV file
     raw_github_csv_link_gl = 'https://raw.githubusercontent.com/SenalFernando712/mas-finance/main/GL_list1.csv'
+
+    vendor = st.text_input('Vendor Name:')
     
     # Read CSV data
     try:
