@@ -1,0 +1,108 @@
+﻿Cost Center,Tier - 3,Internal Order
+I101ENGDEP,Engineering Dept - OPs,ENG_DEP_OPS
+I101ENGDEP,Injection Moulding Project,INJ_MOUL_PRO
+,,
+I101MAT&CH,Glue bonding project,GLU_BOND_PRO
+I101MAT&CH,Accent Aqua Project,ACC_AQUA_PRO
+I101MAT&CH,Accent Sil Project,ACC_SIL_PRO
+I101MAT&CH,Material and Chemist Dept - Ops,MAT&CHEM_OPS
+,,
+,,
+I101COLDEP,BQ Garment dyeing Project,BQ_GAR_DYE_P
+I101COLDEP,Colouration Dept - OPs,COLO_DEP_OPS
+,,
+,,
+I101INLDEV,Inline Development Project,INLINE_DE_PR
+I101PROMPP,Promptly Project,PROMPTLY_PRO
+I101ONEKNI,onEKnit Project,ONEKNIT_PRO
+,,
+I101PLASMA,Dry-vantage Project,DRY_VANT_PRO
+I101PLASMA,Plasma anti snagging Project,PLASMA_A_S_P
+I101PLASMA,Plasma hydrophilic Project,PLASMA_HYD_P
+,,
+I101DLOPS,DL - OPs,DL_OPS
+,,
+I101SPRYPR,Spryng medical Project,SPRY_MED_PRO
+I101SPRYPR,Spryng Sports Project,SPRY_SPO_PRO
+I101SPRYPR,Spryng Ops,SPRYNG_OPS
+,,
+I101ERGON,Ergon gaming           ,ERGON_GAMING
+I101ERGON,Ergon medical,ERGON_MEDICA
+I101ERGON,Ergon Ops,ERGON_OPS
+,,
+I101HEALTH,Healthcare Project,HEALTHCARE_P
+I101FWOPS,FW - OPs,FW_OPS
+,,
+,,
+I101HUB,Graphene Project,GRAPHENE_PRO
+I101HUB,Accent Sil Project,-
+I101HUB,Accent Aqua Project,-
+I101HUB,Toolbox Project,TOOLBOX_PRO
+I101HUB,COT Project,COT_PROJ
+I101HUB,Dwell Project,DWELL_PRO
+I101HUB,Cerese Project,CERESE_PRO
+I101HUB,Fluid Project,FLUID_PRO
+I101HUB,CDP Project,CDP_PRO
+I101HUB,Period Swim Project,PERIOD_SWIM
+I101HUB,Sports Bra Project,SPORTS_BRA
+I101HUB,HUB - Ops,HUB_OPS
+,,
+I101IP,IP - Ops,IP_OPS
+I101IP,IP - WT,IP_WT
+I101IP,IP - FemTech,IP_FEMTECH
+,,IP_CONFIANT
+I101MACHBU,Machine Build - Ops,MACH_BUL_OPS
+,,
+I101DIVENG,Pilot line - Intimates,PL_INTIMATES
+I101DIVENG,Pilot line - Bodyline,PL_BODYLINE
+I101DIVENG,Pilot line - Intimo,PL_INTIMO
+I101DIVENG,Pilot line - Active,PL_ACTIVE
+I101DIVENG,Pilot line - Aqua,PL_AQUA
+I101DIVENG,Pilot line - Silueta,PL_SILUETA
+,,
+I101TCPTNR,Tech Partnerships - Pegasus,TP_PEGASUS
+I101TCPTNR,Tech Partnerships - Brother,TP_BROTHER
+I101TCPTNR,Tech Project - Ops,TP_OPS
+,,
+I101ECOSYS,Eco System - Japan Hub,ES_JAPAN_HUB
+I101ECOSYS,Eco System - Europe,ES_EUROPE
+I101ECOSYS,Eco System - Turkey,ES_TURKEY
+I101ECOSYS,Eco System - China,ES_CHINA
+I101ECOSYS,Eco System - Taiwan,ES_TAIWAN
+I101ECOSYS,Eco System - OPS,ES_OPS
+,,
+I101MAGPRO,RuBer Project,RUBER_PRO
+I101MAGPRO,Compass Project,COMPASS_PRO
+I101MAGPRO,AGV Standardization,AGV_STANDARD
+I101MAGPRO,INNEX Project Commercialization,INNEX_COMMER
+I101MAGPRO,Machine Localization ,MACHINE_LOCL
+I101MAGPRO,GSM project - Trischel,GSM_PRO_TRI
+I101MAGPRO,MI4 project,MI4_PRO
+I101MAGPRO,IoT Project,IOT_PRO
+,,
+I101MAGOPS,MAG - OPs,MAG_OPS
+,,
+I101MCOE,MCOE Projects,MCOE_PRO
+I101MCOE,MCOE - OPS,MCOE_OPS
+,,
+I101HRDPT,HR Dept,HR_DEPTM
+I101FINDPT,Finance Dept,FINANCE_DEP
+I101CENOPS,Central Operations,CENTR_OPS
+,,
+I101TECHPR,Bioastra Project,BIOASTRA_PRO
+I101TECHPR,Sensor Project,SENSOR_PRO
+I101TECHPR,Tech Project - Ops,TECH_PRO_OPS
+,,
+I101COMMER,CoCommercialization_Plasma,COMMR_PLASMA
+I101COMMER,CoCommercialization_Promptly,COMMR_PROMPT
+I101COMMER,CoCommercialization_Ops,COMMR_OPS
+I101COMMER,DXM,DXM
+I101IBOPS,IB Office,IB_OPSINNO
+,,
+I101ONSHOR,Onshoring,400060
+,,
+I101INCUBA,Incubation,400020
+,,
+I101ADJGEN,Adjacency,Adjacency
+,,
+I101META,,META_PRO
