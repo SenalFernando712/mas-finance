@@ -1,7 +1,7 @@
 import streamlit as st
 
 def main():
-    st.title('Financial Information Input Form')
+    st.title('MAS Finance Department : PDF Merger')
     
     # Input fields
     gl_code = st.text_input('GL Code', '')
