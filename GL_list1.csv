@@ -1,0 +1,214 @@
+﻿SAP B1 - A/C Name,G/L Acct Long Text,G/L Account
+Building Improvements,Buildings - Office,10003000
+Provision For Dep -  Building Improvements,Buildings – Office – ADP,10003010
+Plant & Machinery,Plant & Machinery - Office,10005000
+Provision For Dep -  Plant & Machinery,Plant & Machinery – Office – ADP,10005010
+Provision For Dep -  Plant & Machinery,Plant & Machinery - Factory,10006000
+Provision For Dep -  Plant & Machinery,Plant & Machinery – Factory – ADP,10006010
+Lab Equipments,Furniture & Fittings - Office,10009000
+Office Equipments,Furniture & Fittings - Office,10009000
+Furniture & Fittings,Furniture & Fittings - Office,10009000
+Provision For Dep -  Lab Equipments,Furniture & Fittings – Office – ADP,10009010
+Provision For Dep -  Office Equipments,Furniture & Fittings – Office – ADP,10009010
+Provision For Dep -  Furniture & Fittings,Furniture & Fittings – Office – ADP,10009010
+Provision For Dep -  Furniture & Fittings,Furniture & Fittings - Factory,10010000
+Provision For Dep -  Furniture & Fittings,Furniture & Fittings – Factory – ADP,10010010
+Computer & Equipments,Computers - Office,10011000
+Provision For Dep -  Computer & Equipments,Computers – Office – ADP,10011010
+Capital Work in Progress,Asset Under Construction (AUC),10015000
+Computer Software,Purchased Software,11001000
+Computer Software,Purchased Software – Accum Amortisation ,11001010
+Computer Software,Software development,11002000
+Provision for Amortization - Computer software,Software development – Accum Amortisation ,11002010
+Intelectual Properties,Patents & Trade Marks,11003000
+CWIP - Intangible Assets,Asset Under Construction (AUC),10601000
+Acqisition Clearing Account,Asset Clearing Account,10016000
+Provision for Amortization - Intelectual property,Patents & Trade Marks – Accum Amortisation ,11003010
+Shares,Ordinary Shares in Subsidiaries,12001000
+Shares,Ordinary Shares in Associate,12002000
+Shares,Investment - unquoted equity,13001000
+Invest in Fixed Deposits,Investment - Fixed Deposits,13002020
+Debt,Investment - unquoted debt,13002030
+Deffered Tax Receivable,Deferred Tax Assets,14001000
+Inventory,Raw Material in Transit,15001980
+Trade Debtors Control A/C,Trade receivables - Third party - Foreign,16001010
+Related Party Debtors Control A/C,Trade receivables - Related Party,16001020
+Related Party Debtors Control A/C,Provision for Impairment - Trade,16003000
+Provision for Bad Debt,Provision for Impairment - Related Party,16003000
+Provision for Bad Debt,Provision for Impairment - Non Trade,16003020
+Other Advances Receivable,Other Receivables,16005020
+Prepayments,Prepayments - Service Agreements and Others,17001000
+ESC Receivable,ESC Claimable,17003040
+Salary Advances Receivable,Advances - Salaries,17002000
+Advance Payments,Advances - Trade Suppliers,17002010
+Interest Receivable on Fixed Deposits,Other Receivables,16005020
+Interest Receivable on Fixed Deposits,Advances - Non Trade Suppliers,17002020
+FT Advance Receivable,Advances - Foreign Travel,17002030
+Refundable Deposits,Refundable Deposits,17002090
+Emp Deposit - Amrah Akbar,Refundable Deposits,17002090
+Emp Deposit - Rasika Srilal,Refundable Deposits,17002090
+CC - AA,Advances - Credit Cards,17002050
+ HSBC - USD,HSBC USD  Main C/A 1-Main,19010000
+ HSBC - USD,HSBC USD  Main C/A 1-Income,19010001
+ HSBC - USD,HSBC USD  Main C/A 1-Outgoin,19010002
+HSBC - LKR,HSBC LKR  Main C/A 1 Main,19010010
+HSBC - LKR,HSBC LKR  Main C/A 1 Income,19010011
+HSBC - LKR,HSBC LKR  Main C/A 1 Outgoing,19010012
+Standard Chartered Bank - USD,SCB USD  Main C/A 1 Main,19010500
+Standard Chartered Bank - USD,SCB USD  Main C/A 1 Income,19010501
+Standard Chartered Bank - USD,SCB USD  Main C/A 1 Outgoing,19010502
+Standard Charted Bank - LKR,SCB LKR  Main C/A 1 Main,19010510
+Standard Charted Bank - LKR,SCB LKR  Main C/A 1 Income,19010511
+Standard Charted Bank - LKR,SCB LKR  Main C/A 1 Outgoing,19010512
+Standard Chartered Bank (MAG) - LKR,SCB LKR C/A 2  Main,19010520
+Standard Chartered Bank (MAG) - LKR,SCB LKR C/A 2  Income,19010521
+Standard Chartered Bank (MAG) - LKR,SCB LKR C/A 2  Outgoing,19010522
+Standard Chartered Bank (MAG) - USD,SCB USD Current account 2 Main,19010610
+Standard Chartered Bank (MAG) - USD,SCB USD Current account 2 Income,19010611
+Standard Chartered Bank (MAG) - USD,SCB USD Current account 2 Outgoing,19010612
+Sampath Bank (Current A/C) - LKR,Sampath Bank LKR C/A 1 Main,19021400
+Sampath Bank (Current A/C) - LKR,Sampath Bank LKR C/A 1 Income,19021401
+Sampath Bank (Current A/C) - LKR,Sampath Bank LKR C/A 1 Outgoing,19021402
+,Fixed Deposits - USD,19070520
+Seylan Bank - USD,Seylan Bank USD Savings account Main,19075070
+Sampath Bank (Savings A/C) - LKR,Sampath bank LKR Savings,19075080
+NDB Savings - USD,NDB USD Savings A/C,19075090
+Petty Cash - FL - Finance,Petty Cash - Local,19080000
+Petty Cash - DL - Finance,Petty Cash - Local,19080000
+Petty Cash - Euro,Petty Cash - Foreign Currency,19080010
+Petty Cash - GBP,Petty Cash - Foreign Currency,19080010
+Petty Cash - SGD,Petty Cash - Foreign Currency,19080010
+Petty Cash - CAD,Petty Cash - Foreign Currency,19080010
+Petty Cash - USD,Petty Cash - Foreign Currency,19080010
+Stated Capital,Ordinary Shares,20001000
+Advance against Stated Capital,Advance against Share Capital,20003000
+Retained Earnings,Retained Earnings,20004000
+Provision for Gratuity,Provision for Gratuity,30003000
+Differed Tax Liability,Deferred Tax Liabilities,30004000
+Trade Payables,Trade Payable - Services,34001010
+Amounts Due to Related Companies (Trade),Trade Payable - Related Party,34001020
+Non Trade Payables,Non Trade Payables - Services,34002010
+Amounts Due to Related Companies (Non Trade),Non Trade Payables - Related Party ,34002040
+Advance Received(Liability),Customer Advances,34004000
+Dividend Payable,Dividend Payables,34004020
+Retension A,Retention Payables – Contracts,34004030
+Salary Control,Salary Payables,34004040
+Social Give back Project Payable,CSR Payable,34004090
+Staff Welfare Payable,Staff welfare ,34004110
+Accrued Expenses,Accruals - General,34005030
+VAT Control,VAT Control,34005050
+EPF Payable,EPF payable,34005070
+ETF Payable,ETF payable,34005080
+PAYEE Payable,PAYE payable,34005090
+Stamp Duty Payable,Stamp Duty Payable,34005100
+ESC Payable,ESC Payable,34005110
+Income Tax Payable,Corporate Income Tax Payable,34005120
+WHT Payable,WHT Payable,34005140
+WHT Payable,Death Donation contribution,34004120
+Silicon Development Income,I/C –  Royalty Income,42001130
+UI Panty Income,I/C –  Royalty Income,42001130
+IM Income,I/C –  Royalty Income,42001130
+Consultancy Services Income,Consultancy service Income,42005000
+Designing Income,Tech Development income,42005010
+Designing Income,Business Development income,42005020
+Blue Quantum Sales,Material/Component Processing income,42005030
+IM Sales,Material/Component Processing income,42005030
+Gel Band Sales,Material/Component Processing income,42005030
+Nova Sales,Material/Component Processing income,42005030
+Nova Sales,Sample Sales,42005040
+Interest Income,Interest Income on FD /  Savings / Call Deposits,75001000
+Disposal loss,Gain / Loss on PPE Disposals,51002000
+Other Income,Miscellaneous income,51003010
+Cost of Sales - Designing,Production Development Charges - RM,63004010
+Cost of Sales - Blue Quantum,Production Development Charges - RM,63004010
+Cost of Sales - IM,Production Development Charges - RM,63004010
+Cost of Sales - Gel Band,Production Development Charges - RM,63004010
+Cost of Sales - Spryng,Production Development Charges - RM,63004010
+Cost of Sales - Silicon Development,Royalty Exp - Production,63006000
+University/Institute Subscriptions,University/Institute Subscriptions,72022460
+Technical Consultancy Expenses,Technical Development Expenses,72022450
+Tech R&D Expenses,Technical Development Expenses,72022450
+Testing Charges,Technical Development Expenses,72022450
+Secretarial Charges,Professional Fees - Office,72022190
+Payroll Processing Charges,Professional Fees - Office,72022190
+Database Subscriptions,Subscription - Office,72022140
+Business Partner Entertainment Expenses,Entertainment - S&D,71002000
+Market consultancy Expenses,Sales/Business Promotion                                         ,71003000
+IP Searching Charges,IP Related Expenses,72022440
+IP Filing Charges,IP Related Expenses,72022440
+IP Maintenance Charges,IP Related Expenses,72022440
+IP Valuing Charges,IP Related Expenses,72022440
+Air Tickets,Foreign Travelling - Business Related - S&D,71004010
+Visa Fee,Foreign Travelling - Business Related - S&D,71004010
+Cost of Meals,Foreign Travelling - Business Related - S&D,71004010
+Cost of Accommodation,Foreign Travelling - Business Related - S&D,71004010
+Cost of Travelling,Foreign Travelling - Business Related - S&D,71004010
+Per diem,Foreign Travelling - Business Related - S&D,71004010
+Per diem,Sample Expenses - S&D,71006070
+Machine & Equipment Maintenance Expenses,Machinery Maintenance - Other - S&D,71006090
+Salary Expenses,E&M - Salary Costs - Office,72001000
+Cost of Expats,Expat - Salary Costs - Office,72001020
+Other Allowances,E&M - Other Allowance - Office,72001030
+PAYE Expenses,E&M - Employee Taxes - Office,72001540
+Bonus Expenses,E&M - Bonus - Office,72003000
+EPF Expenses,E&M - EPF - Office,72005000
+ETF Expenses,E&M - ETF - Office,72006000
+Gratuity Expenses,E&M - Gratuity - Office,72007000
+Fuel Allowance,Employee Related Expenses - Fuel,72011000
+Fuel Allowance,S&W - Travelling Allowance - Office,72011010
+General Transport Expenses,Employee Related Expenses - Transport Vehicle Hiring,72011020
+Vehicle Allowance,E&M - Vehicle Allowance - Office,72011030
+Casual Wages,Salary Costs - Trainees - Office,72011070
+General Entertainment Expenses,Employee Related Expenses - Special function,72011090
+Staff Welfare Expenses,Employee Related Expenses - General,72011100
+Staff Training Expenses,Staff Training Expenses - Local - Office,72013000
+Staff Training Expenses,Staff Training Expenses - Foreign - Office,72013010
+Office Maintenance Expenses,Maintenance – Equipment – Office ,72014000
+Building Maintenance Expenses,Maintenance – Building – Office ,72014010
+Database Subscriptions,Maintenance - Software - Office,72014040
+Depreciation -  Building Improvements,Dep - Buildings - Office,72015000
+Depreciation -  Lab Equipments,Dep - Furniture & Fittings - Office ,72015010
+Depreciation -  Computer & Equipments,Dep - Computers - Office,72015020
+Depreciation -  Plant & Machinery,Dep - Plant & machinery - Office ,72015040
+Depreciation -  Office Equipments,Dep - Furniture & Fittings - Office ,72015010
+Depreciation -  Furniture & Fittings,Dep - Furniture & Fittings - Office ,72015010
+Amortization,Amortisation - Intangible Assets - Office,72016000
+Leaseline Charges,Call - Fixed lines and Fax - Office,72018000
+Mobile Charges,Call - Mobile Bills - Office,72018010
+Telephone charges,Data - Internet - Office,72018020
+Data Charges,Data - Internet - Office,72018020
+Electricity Expenses,Electricity - Office,72019000
+Medical Insurance Expenses,Employee Related Expenses - Insurance,72020000
+Assets Insurance Expenses,Insurance - Office,72020010
+Group Insurance Expenses,Group Insurance - Office,72020020
+Travel Insurance Expenses,Foreign Travelling - Business Related - S&D,71004010
+Donations & Sponsorships,Community Development & CSR expenses,72021000
+Legato Charges,Shared Services Expenses - Office,72022001
+Printing & Stationery Expenses,Printing & Stationery - Office,72022040
+Consumables,Office Consumables,72022050
+Cost of Samples,Sample Expenses - S&D,71006070
+Rent Expenses,Rent - Office,72022070
+Security Charges,Security Charges - Office,72022100
+Other Utilities,Rent - Office,72022070
+IT Service Charges,MAS TS Expenses - Office,72022120
+Professional Membership & Exam Fees,Subscription - Office,72022140
+Tax Advisory Charges,Professional Fees - Office,72022190
+Audit Related Expenses,Audit Fees,72022200
+Legal Charges,BPU,72022220
+Courier Charges,Local Delivery & Postal Charges - Office,72022250
+Water Expenses,Water - Office,72022330
+Advisory Board Expenses,Consultancy Fees - Office,72022410
+Disposal loss,Loss on PPE Disposals,73001000
+Bank charges,Bank Charges,73001010
+Credit Card Charges,Bank Charges,73001010
+Credit Card Charges,Exchange Loss – Realised ,73002000
+Exchange Gain/Loss,Exchange Loss – Unrealised ,73002010
+Interest expenses,Interest Expense – Overdraft,74001000
+Disposal loss,Impairment Loss on AFS Equity Investments,74001080
+Disposal loss,Fair Value Loss on FVTPL Instruments,74001100
+Income Tax,Income Tax Expense,81001000
+Opening balance Clearing Account,Opening balance Clearing Account,39999998
+Opening balance Clearing Account,Clearing-Bank Transfer,19090010
+Opening balance Clearing Account,Non Trade Payables - One time ,34002030
+Opening balance Clearing Account,Debit Suspense,34004170
+Opening balance Clearing Account,Interest income receivable ,16005040
