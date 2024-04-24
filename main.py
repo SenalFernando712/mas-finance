@@ -16,41 +16,21 @@ def create_pdf(vendor, gl_pdf, cost_pdf, internal_pdf, assignment, text, amount)
     # Add a page
     pdf.add_page()
     
-    # Set font for the entire document
+    # Set font
     pdf.set_font("Arial", size = 12)
     
-    # Add a cell
-    pdf.cell(200, 10, txt = "MAS Finance Department: PDF Table", ln = True, align = 'C')
-    
-    # Add line break
-    pdf.ln(10)
-    
-    # Set font for table headers
-    pdf.set_font("Arial", size = 10)
-    
-    # Add table headers
-    pdf.cell(40, 10, "Vendor", 1, 0, 'C')
-    pdf.cell(40, 10, "G/L Account", 1, 0, 'C')
-    pdf.cell(40, 10, "Cost Center", 1, 0, 'C')
-    pdf.cell(40, 10, "Internal Order", 1, 0, 'C')
-    pdf.cell(40, 10, "Assignment", 1, 0, 'C')
-    pdf.cell(40, 10, "Text", 1, 0, 'C')
-    pdf.cell(40, 10, "Amount", 1, 1, 'C')
-    
-    # Set font for table data
-    pdf.set_font("Arial", size = 8)
-    
-    # Add table data
-    pdf.cell(40, 10, vendor, 1, 0, 'L')
-    pdf.cell(40, 10, gl_pdf, 1, 0, 'L')
-    pdf.cell(40, 10, cost_pdf, 1, 0, 'L')
-    pdf.cell(40, 10, internal_pdf, 1, 0, 'L')
-    pdf.cell(40, 10, assignment, 1, 0, 'L')
-    pdf.cell(40, 10, text, 1, 0, 'L')
-    pdf.cell(40, 10, amount, 1, 1, 'L')
+    # Add text
+    pdf.cell(200, 10, txt = "MAS Finance Department: PDF", ln = True, align = 'C')
+    pdf.cell(200, 10, txt = "Vendor Name: " + vendor, ln = True, align = 'L')
+    pdf.cell(200, 10, txt = "G/L Account: " + gl_pdf, ln = True, align = 'L')
+    pdf.cell(200, 10, txt = "Cost Center: " + cost_pdf, ln = True, align = 'L')
+    pdf.cell(200, 10, txt = "Internal Order: " + internal_pdf, ln = True, align = 'L')
+    pdf.cell(200, 10, txt = "Assignment: " + assignment, ln = True, align = 'L')
+    pdf.cell(200, 10, txt = "Text: " + text, ln = True, align = 'L')
+    pdf.cell(200, 10, txt = "Amount: " + amount, ln = True, align = 'L')
     
     # Save the pdf with name .pdf
-    pdf_file_name = "MAS_Finance_PDF_Table.pdf"
+    pdf_file_name = "MAS_Finance_PDF.pdf"
     pdf.output(pdf_file_name)
     
     return pdf_file_name
@@ -100,23 +80,4 @@ def main():
             cost_pdf = row_cost.iloc[0]['Cost Center']
             internal_pdf = row_cost.iloc[0]['Internal Order']
             st.write('Cost Center Code:', cost_pdf)
-            st.write('Internal Order Code:', internal_pdf)
-        else:
-            st.write('No data found for the selected Cost Center.')
-            
-    except Exception as f:
-        st.error(f'Error reading Cost Center CSV file: {f}')
-
-    assignment = st.text_input('Assignment:')
-    text = st.text_input('Text:')
-    amount = st.text_input('Amount:')
-    
-    if st.button('Generate PDF'):
-        if vendor and gl_pdf and cost_pdf and internal_pdf and assignment and text and amount:
-            pdf_file_name = create_pdf(vendor, gl_pdf, cost_pdf, internal_pdf, assignment, text, amount)
-            st.success(f'PDF generated successfully: [Download PDF]({pdf_file_name})')
-        else:
-            st.error('Please fill in all fields to generate the PDF.')
-
-if __name__ == '__main__':
-    main()
+            st.wr
