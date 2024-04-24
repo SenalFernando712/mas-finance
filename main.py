@@ -9,7 +9,7 @@ def read_csv_data(url):
     return df
 
 def main():
-    st.title('Display CSV Data from GitHub')
+    st.title('MAS Finance Department : PDF Merger')
 
     # Replace 'raw_github_csv_link' with the raw GitHub link to your CSV file
     raw_github_csv_link_gl = 'https://raw.githubusercontent.com/SenalFernando712/mas-finance/main/GL_list1.csv'
@@ -28,7 +28,7 @@ def main():
         
         # Display the data from the third column (G/L Account) of the selected row
         if not row.empty:
-            st.write('(G/L Account:', row.iloc[0]['G/L Account'])
+            st.write('G/L Account:', row.iloc[0]['G/L Account'])
         else:
             st.write('No data found for the selected GL Account.')
             
