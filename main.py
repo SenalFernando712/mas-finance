@@ -44,7 +44,7 @@ def main():
         cost_no = st.selectbox('Cost Center', cost_codes)
         
         # Split the selected gl_no to get the actual GL Account
-        selected_cost_account = cost_no.strip()
+        selected_cost_account = cost_no
         
         # Find the row where the GL Account matches the selected GL Account
         row_cost = df[df['Tier - 3'] == selected_cost_account]
