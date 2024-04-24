@@ -9,73 +9,71 @@ def read_csv_data(url):
     df = pd.read_csv(url)
     return df
 
+# Function to create PDF
 def create_pdf(vendor, gl_pdf, cost_pdf, internal_pdf, assignment, text, amount):
-    # Create instance of FPDF class
     pdf = FPDF()
-    
-    # Add a page
     pdf.add_page()
-    
-    # Set font
-    pdf.set_font("Arial", size = 12)
-    
-    # Add text
-    pdf.cell(200, 10, txt = "MAS Finance Department: PDF", ln = True, align = 'C')
-    pdf.cell(200, 10, txt = "Vendor Name: " + vendor, ln = True, align = 'L')
-    pdf.cell(200, 10, txt = "G/L Account: " + gl_pdf, ln = True, align = 'L')
-    pdf.cell(200, 10, txt = "Cost Center: " + cost_pdf, ln = True, align = 'L')
-    pdf.cell(200, 10, txt = "Internal Order: " + internal_pdf, ln = True, align = 'L')
-    pdf.cell(200, 10, txt = "Assignment: " + assignment, ln = True, align = 'L')
-    pdf.cell(200, 10, txt = "Text: " + text, ln = True, align = 'L')
-    pdf.cell(200, 10, txt = "Amount: " + amount, ln = True, align = 'L')
-    
-    # Save the pdf with name .pdf
-    pdf_file_name = "MAS_Finance_PDF.pdf"
-    pdf.output(pdf_file_name)
-    
-    return pdf_file_name
+    pdf.set_font("Arial", size=12)
+
+    pdf.cell(200, 10, txt="MAS Finance Department: PDF Merger", ln=True, align="C")
+    pdf.cell(200, 10, txt=" ", ln=True, align="C")  # Add empty line
+
+    # Add fields to PDF
+    pdf.cell(200, 10, txt=f"Vendor: {vendor}", ln=True)
+    pdf.cell(200, 10, txt=f"G/L Account: {gl_pdf}", ln=True)
+    pdf.cell(200, 10, txt=f"Cost Center Code: {cost_pdf}", ln=True)
+    pdf.cell(200, 10, txt=f"Internal Order Code: {internal_pdf}", ln=True)
+    pdf.cell(200, 10, txt=f"Assignment: {assignment}", ln=True)
+    pdf.cell(200, 10, txt=f"Text: {text}", ln=True)
+    pdf.cell(200, 10, txt=f"Amount: {amount}", ln=True)
+
+    pdf.output("MAS_Finance_Document.pdf")
 
 def main():
-    st.title('MAS Finance Department: PDF Merger')
+    st.title('MAS Finance Department : PDF Merger')
 
     # Replace 'raw_github_csv_link' with the raw GitHub link to your CSV file
     raw_github_csv_link_gl = 'https://raw.githubusercontent.com/SenalFernando712/mas-finance/main/GL_list1.csv'
-    raw_github_csv_link_cost = 'https://raw.githubusercontent.com/SenalFernando712/mas-finance/main/Cost_Centre_list1.csv'
 
     vendor = st.text_input('Vendor Name:')
     
-    # Read GL CSV data
+    # Read CSV data
     try:
-        df_gl = read_csv_data(raw_github_csv_link_gl)
-        gl_codes = df_gl['SAP B1 - A/C Name'].astype(str) + ' : ' + df_gl['G/L Acct Long Text'].astype(str)
-        gl_no = st.selectbox('G/L Account', gl_codes)
+        df = read_csv_data(raw_github_csv_link_gl)
+        gl_codes = df['SAP B1 - A/C Name'].astype(str) + ' : ' + df['G/L Acct Long Text'].astype(str)
+        gl_no = st.selectbox('GL Description', gl_codes)
         
         # Split the selected gl_no to get the actual GL Account
         selected_gl_account = gl_no.split(':')[0].strip()
         
         # Find the row where the GL Account matches the selected GL Account
-        row_gl = df_gl[df_gl['SAP B1 - A/C Name'] == selected_gl_account]
+        row = df[df['SAP B1 - A/C Name'] == selected_gl_account]
         
         # Display the data from the third column (G/L Account) of the selected row
-        if not row_gl.empty:
-            gl_pdf = row_gl.iloc[0]['G/L Account']
+        if not row.empty:
+            gl_pdf = row.iloc[0]['G/L Account']
             st.write('G/L Account:', gl_pdf)
         else:
-            st.write('No data found for the selected G/L Account.')
+            st.write('No data found for the selected GL Account.')
             
     except Exception as e:
         st.error(f'Error reading GL List CSV file: {e}')
 
-    # Read Cost Center CSV data
+    raw_github_csv_link_cost = 'https://raw.githubusercontent.com/SenalFernando712/mas-finance/main/Cost_Centre_list1.csv'
+    
+    # Read CSV data
     try:
-        df_cost = read_csv_data(raw_github_csv_link_cost)
-        cost_codes = df_cost['Tier - 3'].astype(str)
+        df = read_csv_data(raw_github_csv_link_cost)
+        cost_codes = df['Tier - 3'].astype(str)
         cost_no = st.selectbox('Cost Center', cost_codes)
         
-        # Find the row where the Cost Center matches the selected Cost Center
-        row_cost = df_cost[df_cost['Tier - 3'] == cost_no]
+        # Split the selected gl_no to get the actual GL Account
+        selected_cost_account = cost_no
         
-        # Display the data from the third column (Cost Center) of the selected row
+        # Find the row where the GL Account matches the selected GL Account
+        row_cost = df[df['Tier - 3'] == selected_cost_account]
+        
+        # Display the data from the third column (G/L Account) of the selected row
         if not row_cost.empty:
             cost_pdf = row_cost.iloc[0]['Cost Center']
             internal_pdf = row_cost.iloc[0]['Internal Order']
@@ -91,12 +89,9 @@ def main():
     text = st.text_input('Text:')
     amount = st.text_input('Amount:')
     
-    if st.button('Generate PDF'):
-        if vendor and gl_pdf and cost_pdf and internal_pdf and assignment and text and amount:
-            pdf_file_name = create_pdf(vendor, gl_pdf, cost_pdf, internal_pdf, assignment, text, amount)
-            st.success(f'PDF generated successfully: [Download PDF]({pdf_file_name})')
-        else:
-            st.error('Please fill in all fields to generate the PDF.')
+    # Button to generate PDF
+    if st.button("Generate PDF"):
+        create_pdf(vendor, gl_pdf, cost_pdf, internal_pdf, assignment, text, amount)
 
 if __name__ == '__main__':
     main()
