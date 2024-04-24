@@ -64,15 +64,10 @@ def main():
     except Exception as f:
         st.error(f'Error reading Cost Center CSV file: {f}')
 
-    st.text_input('Assignment:')
-    st.text_input('Text:')
-    st.text_input('Amount:')
+    assignment = st.text_input('Assignment:')
+    text = st.text_input('Text:')
+    amount = st.text_input('Amount:')
     
-    '''
-    st.write('G/L Account:', gl_pdf)
-    st.write('Cost Center Code:', cost_pdf)
-    st.write('Internal Order Code:', internal_pdf)
-    '''
 
 if __name__ == '__main__':
     main()
