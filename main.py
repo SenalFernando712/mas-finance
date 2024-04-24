@@ -28,7 +28,8 @@ def main():
         
         # Display the data from the third column (G/L Account) of the selected row
         if not row.empty:
-            st.write('G/L Account:', row.iloc[0]['G/L Account'])
+            gl_pdf = row.iloc[0]['G/L Account']
+            st.write('G/L Account:', gl_pdf)
         else:
             st.write('No data found for the selected GL Account.')
             
@@ -51,7 +52,10 @@ def main():
         
         # Display the data from the third column (G/L Account) of the selected row
         if not row_cost.empty:
-            st.write('Cost Center Code:', row_cost.iloc[0]['Cost Center'])
+            cost_pdf = row_cost.iloc[0]['Cost Center']
+            internal_pdf = row_cost.iloc[0]['Internal Order']
+            st.write('Cost Center Code:', cost_pdf)
+            st.write('Internal Order Code:', internal_pdf)
         else:
             st.write('No data found for the selected Cost Center.')
             
