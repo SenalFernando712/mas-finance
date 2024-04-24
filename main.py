@@ -80,4 +80,23 @@ def main():
             cost_pdf = row_cost.iloc[0]['Cost Center']
             internal_pdf = row_cost.iloc[0]['Internal Order']
             st.write('Cost Center Code:', cost_pdf)
-            st.wr
+            st.write('Internal Order Code:', internal_pdf)
+        else:
+            st.write('No data found for the selected Cost Center.')
+            
+    except Exception as f:
+        st.error(f'Error reading Cost Center CSV file: {f}')
+
+    assignment = st.text_input('Assignment:')
+    text = st.text_input('Text:')
+    amount = st.text_input('Amount:')
+    
+    if st.button('Generate PDF'):
+        if vendor and gl_pdf and cost_pdf and internal_pdf and assignment and text and amount:
+            pdf_file_name = create_pdf(vendor, gl_pdf, cost_pdf, internal_pdf, assignment, text, amount)
+            st.success(f'PDF generated successfully: [Download PDF]({pdf_file_name})')
+        else:
+            st.error('Please fill in all fields to generate the PDF.')
+
+if __name__ == '__main__':
+    main()
