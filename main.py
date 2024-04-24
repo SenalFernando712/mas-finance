@@ -4,7 +4,7 @@ import pandas as pd
 # Function to read Excel file and extract GL codes
 def read_excel_data():
     # Replace 'your_excel_file.xlsx' with the path to your Excel file
-    df = pd.read_excel('GL_list.xlsx')
+    df = pd.read_excel('https://github.com/SenalFernando712/mas-finance/blob/main/GL_list.xlsx')
     gl_codes = df['Column 1'].astype(str) + ' : ' + df['Column 2'].astype(str)
     return gl_codes.tolist()
 
