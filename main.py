@@ -1,11 +1,15 @@
 import streamlit as st
 import pandas as pd
+import requests
+from io import BytesIO
 
-
-# Function to read Excel file and extract GL codes
+#https://github.com/SenalFernando712/mas-finance/blob/main/GL_list.xlsx
+# Function to read Excel file from GitHub repository and extract GL codes
 def read_excel_data():
-    # Replace 'your_excel_file.xlsx' with the path to your Excel file
-    df = pd.read_excel('main/GL_list.xlsx')
+    # Replace 'github_username' with your GitHub username and 'repository_name' with your repository name
+    url = 'https://raw.githubusercontent.com/SenalFernando712/mas-finance/blob/main/GL_list.xlsx'
+    response = requests.get(url)
+    df = pd.read_excel(BytesIO(response.content))
     gl_codes = df['Column 1'].astype(str) + ' : ' + df['Column 2'].astype(str)
     return gl_codes.tolist()
 
