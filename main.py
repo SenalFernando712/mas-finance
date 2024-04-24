@@ -18,7 +18,7 @@ def main():
     try:
         df = read_csv_data(raw_github_csv_link_gl)
         gl_codes = df['SAP B1 - A/C Name'].astype(str) + ' : ' + df['G/L Acct Long Text'].astype(str)
-        selected_gl_index = st.selectbox('GL No', range(len(gl_codes)))
+        selected_gl_index = st.selectbox('GL No', gl_codes)
         selected_gl_no = gl_codes[selected_gl_index]
         # Display the selected GL No
         st.write('Selected GL No:', selected_gl_no)
