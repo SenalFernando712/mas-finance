@@ -51,7 +51,8 @@ def main():
         
         # Display the data from the third column (G/L Account) of the selected row
         if not row_cost.empty:
-            st.write('G/L Account:', row_cost.iloc[0]['Cost Center'])
+            #st.write('Cost Center Code:', row_cost.iloc[0]['Cost Center'])
+            st.markdown(f'<p style="color: green;">Cost Center Code: {row.iloc[0]["Cost Center"]}</p>', unsafe_allow_html=True)
         else:
             st.write('No data found for the selected GL Account.')
             
