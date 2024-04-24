@@ -17,9 +17,22 @@ def main():
     # Read CSV data
     try:
         df = read_csv_data(raw_github_csv_link_gl)
-        gl_codes = df['Column 1'].astype(str) + ' : ' + df['Column 2'].astype(str)
+        gl_codes = df['SAP B1 - A/C Name'].astype(str) + ' : ' + df['G/L Acct Long Text'].astype(str)
         gl_no = st.selectbox('GL No', gl_codes)
         st.write('Selected GL No:', gl_no)
+        
+        # Split the selected gl_no to get the actual GL Account
+        selected_gl_account = gl_no.split(':')[0].strip()
+        
+        # Find the row where the GL Account matches the selected GL Account
+        row = df[df['SAP B1 - A/C Name'] == selected_gl_account]
+        
+        # Display the data from the third column (G/L Account) of the selected row
+        if not row.empty:
+            st.write('Data from third column (G/L Account):', row.iloc[0]['G/L Account'])
+        else:
+            st.write('No data found for the selected GL Account.')
+            
     except Exception as e:
         st.error(f'Error reading CSV file: {e}')
 
