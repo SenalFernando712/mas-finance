@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import requests
-from fpdf import FPDF
 
 # Function to read CSV file from GitHub repository
 def read_csv_data(url):
@@ -9,25 +8,35 @@ def read_csv_data(url):
     df = pd.read_csv(url)
     return df
 
-# Function to create PDF
-def create_pdf(vendor, gl_pdf, cost_pdf, internal_pdf, assignment, text, amount):
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_font("Arial", size=12)
+class PDFGenerator:
+    def __init__(self, vendor, gl_no, cost_centre_no, internal_order_no, assignment, text, amount):
+        self.vendor = vendor
+        self.gl_no = gl_no
+        self.cost_centre_no = cost_centre_no
+        self.internal_order_no = internal_order_no
+        self.assignment =  assignment
+        self.text = text
+        self.amount = amount
 
-    pdf.cell(200, 10, txt="MAS Finance Department: PDF Merger", ln=True, align="C")
-    pdf.cell(200, 10, txt=" ", ln=True, align="C")  # Add empty line
+    def generate_pdf(self):
+        # Create PDF
+        doc = SimpleDocTemplate("output.pdf", pagesize=letter)
+        elements = []
 
-    # Add fields to PDF
-    pdf.cell(200, 10, txt=f"Vendor: {vendor}", ln=True)
-    pdf.cell(200, 10, txt=f"G/L Account: {gl_pdf}", ln=True)
-    pdf.cell(200, 10, txt=f"Cost Center Code: {cost_pdf}", ln=True)
-    pdf.cell(200, 10, txt=f"Internal Order Code: {internal_pdf}", ln=True)
-    pdf.cell(200, 10, txt=f"Assignment: {assignment}", ln=True)
-    pdf.cell(200, 10, txt=f"Text: {text}", ln=True)
-    pdf.cell(200, 10, txt=f"Amount: {amount}", ln=True)
+        # Add table with input values
+        data = [
+            ['Vendor:', self.vendor],
+            ['GL No:', self.gl_no],
+            ['Cost Centre No:', self.cost_centre_no],
+            ['Internal Order No:', self.internal_order_no],
+            ['Assignmnet:', self.assignment],
+            ['Text:', self.text],
+            ['Amount:', self.amount]
+        ]
+        table = Table(data)
+        elements.append(table)
 
-    pdf.output("MAS_Finance_Document.pdf")
+        doc.build(elements)
 
 def main():
     st.title('MAS Finance Department : PDF Merger')
@@ -88,10 +97,15 @@ def main():
     assignment = st.text_input('Assignment:')
     text = st.text_input('Text:')
     amount = st.text_input('Amount:')
-    
+
     # Button to generate PDF
     if st.button("Generate PDF"):
-        create_pdf(vendor, gl_pdf, cost_pdf, internal_pdf, assignment, text, amount)
+        # Create PDF
+        pdf_generator = PDFGenerator(gl_pdf, cost_pdf, internal_pdf)
+        pdf_generator.generate_pdf()
+        
+        
+    
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     main()
