@@ -7,7 +7,7 @@ from io import BytesIO
 # Function to read Excel file from GitHub repository and extract GL codes
 def read_excel_data():
     # Replace 'github_username' with your GitHub username and 'repository_name' with your repository name
-    url = 'https://raw.githubusercontent.com/SenalFernando712/mas-finance/blob/main/GL_list.xlsx'
+    url = 'https://raw.githubusercontent.com/SenalFernando712/mas-finance/main/GL_list1.csv'
     response = requests.get(url)
     df = pd.read_excel(BytesIO(response.content))
     gl_codes = df['Column 1'].astype(str) + ' : ' + df['Column 2'].astype(str)
